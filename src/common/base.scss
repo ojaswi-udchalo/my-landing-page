@@ -1,0 +1,53 @@
+@import "variables";
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-center {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin font-open-sans($size, $weight, $line-height, $color) {
+  font-family: $font-open-sans;;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin flex-row-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin customFontStyle($font: $open_sans_font_family, $weight: 100, $style: normal, $size: null, $lineHeight: null) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: $style;
+
+  @if($size) {
+    font-size: $size;
+  }
+
+  @if ($lineHeight) {
+    line-height: $lineHeight;
+  }
+}
+
+@mixin featureStyle($font-family, $font-weight, $font-size, $color) {
+  @include customFontStyle($font-family, $font-weight, normal, $font-size);
+  color: $color;
+}
+
+@mixin lineClamp($noOfLines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $noOfLines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

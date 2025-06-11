@@ -1,0 +1,191 @@
+@import '../../../../common/base.scss';
+
+$primary-background : $color-white;
+$secondary-background : $background-elephant;
+$primary-text : $color-white;
+$secondary-text : $color-alto;
+$primary-heading: $color-emperor;
+$secondary-heading: $color-curious-blue;
+$primary-font : $font-open-sans;
+
+.headerBox {
+    position: relative;
+    width: 100%;
+    top: 0px;
+    margin: 0px;
+    background-color: $primary-background;
+    opacity: 1;
+
+    .promoHeader {
+        align-items: center;
+        height: 40px;
+        display: flex;
+        background-color: $secondary-background;
+        justify-content: right;
+
+
+
+        padding: 0 10%;
+
+        .promHeaderDiscounts {
+            display: flex;
+            align-items: center;
+
+            .promDiscountText {
+
+                @include customFontStyle($primary-font, 600, normal, 12px, normal);
+                color: $primary-text;
+
+                margin-left: 10px;
+                align-items: center;
+            }
+        }
+
+        .promHeaderFaujiFamily {
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+
+            .promFaujiFamilyCont {
+                margin-left: 6px;
+
+                .promFaujiFamilyTitle {
+                    @include customFontStyle($primary-font, 600, normal, 12px, 14px);
+                    color: $primary-text;
+
+                }
+
+                .promFaujiFamilyText {
+
+                    @include customFontStyle($primary-font, 400, normal, 10px, normal);
+                    color: $secondary-text;
+                }
+            }
+
+        }
+
+    }
+
+    .header {
+        margin: 0 11%;
+        height: 64px;
+        display: flex;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+
+        .headerStart {
+            display: flex;
+
+            .headerLogo {
+                display: flex;
+                align-items: center;
+            }
+
+            .headerContainer {
+                flex-basis: 40%;
+                display: flex;
+                align-items: center;
+
+                @include customFontStyle($primary-font, 400, normal, 16px, normal);
+                color: $primary-heading;
+
+
+                div {
+                    padding-right: 12%;
+
+                    a{
+                        text-decoration: none;
+                        color: $primary-heading;
+                    }
+
+                }
+            }
+        }
+
+        .headerEnd {
+            
+            display: flex;
+
+            .headerEndLogo {
+                display: flex;
+                align-items: center;
+                padding-left: 24px;
+
+                .headerEndSupportLogoText {
+                    padding-left: 5px;
+                    @include customFontStyle($primary-font, 400, normal, 16px, normal);
+                    
+
+                    a{
+                        text-decoration: none;
+                        color: $primary-heading;
+
+                    }
+
+                }
+
+                .headerEndUserLogoText {
+                    padding-left: 4px;
+                    @include customFontStyle($primary-font, 700, normal, 16px, normal);
+                    
+
+                    a {
+                      text-decoration: none;
+                      color: $secondary-heading;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width:601px) and (max-width:1000px) {
+
+
+
+    .headerContainer {
+        div {
+            display: none;
+
+        }
+    }
+
+    .headerEndUserLogoText {
+        display: none;
+    }
+
+    .headerEndSupportLogoText {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .headerBox {
+
+        z-index: 12;
+        position: fixed; 
+        .promoHeader {
+            display: none;
+        }
+
+        .header{
+            margin: 0 6%;
+            .headerStart{
+                .headerContainer {
+                    display: none;
+                }
+            }
+
+           .headerEnd {
+            display: none;
+           }
+        }
+
+        
+
+    }
+}

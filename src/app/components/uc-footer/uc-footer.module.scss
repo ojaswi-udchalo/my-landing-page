@@ -1,0 +1,339 @@
+@import '../../../../common/base.scss';
+
+$primary-background : $background-elephant;
+$heading-text : $color-white;
+$category-text : $color-botticelli;
+$sub-heading-text : $color-alto;
+$primary-title : $color-periwinke-gray;
+$primary-border : $color-gray;
+$primary-font : $font-open-sans;
+$primary-mobile-background : $color-black-pearl;
+
+.footer {
+    height: auto;
+    background-color: $primary-background;
+    padding: 2% 11%;
+
+
+    .hiddenItem {
+        visibility: hidden;
+    }
+
+    .footerCont {
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+
+        .footerCont1 {
+            flex-basis: 56%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+
+            .footerContainerLine1 {
+                display: flex;
+                gap: 2%;
+                padding-bottom: 10px;
+
+                .footerContainerLineTitle {
+                    display: flex;
+                    padding-right: 2%;
+                    @include customFontStyle($primary-font, 600, normal, 14px, 30px);
+                    color: $heading-text;
+                    letter-spacing: 0.28px;
+                    text-transform: capitalize;
+
+
+
+                }
+                .dark_mode_footerContainerLineTitle {
+                    @extend .footerContainerLineTitle;
+                    color: $color-emperor;
+                }
+            }
+
+            .footerContainerLine2 {
+                display: flex;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                .footerContainerLine2Title {
+                    display: flex;
+                    margin-right: 1%;
+                    @include customFontStyle($primary-font, 600, normal, 14px, 30px);
+                    color: $category-text;
+                    text-transform: capitalize;
+
+
+                }
+
+                .white_bg_footerContainerLine2Title {
+                    @extend .footerContainerLine2Title;
+                    color: $color-emperor;
+                }
+
+
+
+                .foobar {
+                    display: block;
+                    margin: 0 1%;
+                    @include customFontStyle($primary-font, 600, normal, 12px, 30px);
+                    opacity: 0.7;
+                    
+                    a {
+                        text-decoration: none;
+                        color: $sub-heading-text;
+                    }
+
+                }
+
+                .white_bg_foobar {
+                    display: block;
+                    margin: 0 1%;
+                    @include customFontStyle($primary-font, 600, normal, 12px, 30px);
+                    opacity: 0.7;
+                    a {
+                        text-decoration: none;
+                        color: $color-emperor;
+                    }
+                }
+            }
+        }
+
+        .footerCont2 {
+            flex-basis: 32%;
+            padding: 9px;
+
+            .fooCont2DownloadText {
+                padding-left: 8px;
+                @include customFontStyle($primary-font, 400, normal, 12px, 16px);
+                color: $heading-text;
+                letter-spacing: 0.24px;
+                margin-bottom: 22px;
+            }
+
+            .white_bg_fooCont2DownloadText {
+                padding-left: 8px;
+                @include customFontStyle($primary-font, 400, normal, 12px, 16px);
+                color: $color-emperor;
+                letter-spacing: 0.24px;
+                margin-bottom: 22px;
+            }
+
+            div {
+                margin-bottom: 6px;
+            }
+
+            .fooCont2AppStoreIcon {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+
+                .fooCont2GooglePlayIcon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .footerCont3QrLogo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 5px;
+        
+                        img {
+                            width: 58px;
+                            height: 58px;
+                        }
+                    }
+
+                    a {
+
+                        img {
+                            width: 126px;
+                            height: 52px;
+                        }
+                    }
+                }
+
+                .fooCont2AppleStoreIcon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .footerCont3QrLogo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 5px;
+        
+                        img {
+                            width: 58px;
+                            height: 58px;
+                        }
+                    }
+
+                    a {
+
+                        img {
+                            width: 118px;
+                            height: 36px;
+                        }
+                    }
+                }
+
+
+            }
+
+            .fooCont2MediaIcon {
+                display: flex;
+                padding-top: 14px;
+                padding-left: 8px;
+
+                div {
+                    margin-right: 5%;
+                }
+            }
+
+
+        }
+
+        .footerCont3 {
+            flex-basis: 12%;
+            padding: 18px 0;
+
+
+            .footerCont3QrLogo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10%;
+                padding: 8px 5%;
+                margin-bottom: 2%;
+
+                img {
+                    width: 68px;
+                    height: 68px;
+                }
+            }
+
+            .fooCont3Text {
+
+
+                display: inline;
+                text-align: center;
+                @include customFontStyle($primary-font, 400, normal, 12px, normal);
+                color: $sub-heading-text;
+                opacity: 0.7;
+
+
+
+            }
+        }
+
+
+    }
+
+    .footerEnd {
+        border-top: 1px solid $primary-border;
+        display: flex;
+        margin-top: 1%;
+        position: relative;
+
+
+        .footerEnd1 {
+            flex-basis: 60%;
+            margin: 3% 0;
+
+            .footerEnd1Text {
+                display: flex;
+                @include customFontStyle($primary-font, 400, normal, 14px, 27px);
+                color: $primary-title;
+                opacity: 0.6;
+                letter-spacing: 0.14px;
+
+                div {
+                    padding-left: 1px;
+                }
+            }
+
+            .white_bg_footerEnd1Text {
+                @extend .footerEnd1Text;
+                color: $color-emperor;
+            }
+
+        }
+
+        .footerEnd2 {
+            flex-basis: 40%;
+            position: absolute;
+            top: 20%;
+            right: 6%;
+            display: flex;
+
+            img {
+                margin: 2% 4%;
+            }
+
+
+        }
+
+    }
+
+    .mobileFooter {
+        display: none;
+    }
+}
+
+.white_bg {
+    background-color: $color-white-smoke;
+}
+
+@media (min-width:601px) and (max-width:790px) {
+    .footer {
+        .footerCont {
+            .footerCont2 {
+                display: none;
+            }
+
+            .footerCont3 {
+                display: none;
+            }
+        }
+
+        .footerEnd {
+            .footerEnd2 {
+                display: none;
+            }
+
+        }
+
+    }
+
+}
+
+
+@media (max-width:600px) {
+    .footer {
+        background-color: $primary-mobile-background;
+        .footerCont {
+            display: none;
+        }
+
+        .footerEnd {
+            display: none;
+        }
+
+        .mobileFooter {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            @include customFontStyle($primary-font, 400, normal, 14px, 27px);
+            color: $primary-title;
+        }
+
+    }
+
+}
